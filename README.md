@@ -1,18 +1,43 @@
-# prisma-starter-app
+# prisma-starter-ts-app
+
+"The downloaded project had Prisma all set up and included an SQLite database with some blog data.
+
+The `schema.prisma` file described the User and Post models that represent tables in the SQLite database.
+
+After downloading and installing the dependencies, you wrote a query using the Prisma Client.
+
+This query asked for all the users and their blog posts. You then printed the results of the query to the terminal."
+
 
 ## SRC
 
 https://www.prisma.io/docs/getting-started/quickstart
 
 
-## Setup
+## Run
 
-### Windows
-
+Running
 ```bash
-$> curl https://pris.ly/quickstart -L -o quickstart-main.tar.gz
-$> tar -zxvf quickstart-main.tar.gz quickstart-main/typescript/starter
-$> move quickstart-main\typescript\starter starter
-$> mdir /S /Q quickstart-main
-$> del /Q quickstart-main.tar.gz
+$ npm run dev
+```
+
+returns ...
+```bash
+[
+  { id: 1, email: 'sarah@prisma.io', name: 'Sarah', posts: [] },
+  {
+    id: 2,
+    email: 'maria@prisma.io',
+    name: 'Maria',
+    posts: [
+      {
+        id: 1,
+        title: 'Hello World',
+        content: null,
+        published: false,
+        authorId: 2
+      }
+    ]
+  }
+]
 ```

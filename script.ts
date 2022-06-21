@@ -1,16 +1,23 @@
 import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient()
+const oPrismaClient = new PrismaClient()
 
-// A `main` function so that you can use async/await
 async function main() {
-  // ... you will write your Prisma Client queries here
+  const users = await oPrismaClient.user.findMany({
+    include: { posts: true },
+  })
+
+  console.table(users)
+
+  // use `console.dir` to print nested objects
+  console.dir(users, { depth: null })
 }
 
+
 main()
-  .catch(e => {
-    throw e
+  .catch(oError => {
+    throw oError
   })
   .finally(async () => {
-    await prisma.$disconnect()
+    await oPrismaClient.$disconnect()
   })
