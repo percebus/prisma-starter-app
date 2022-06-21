@@ -8,7 +8,12 @@
     "@types/node": "16.11.26"
   },
   "scripts": {
-    "dev": "ts-node ./script.ts"
+    "npm:install:global": "npm install --location=global bower",
+    "bower:install": "bower update && bower install",
+    "setup": "npm run npm:install:global",
+    "postinstall": "npm run bower:install",
+    "ts-node:script": "ts-node ./script.ts",
+    "dev": "npm run ts-node:script"
   },
   "dependencies": {
     "@prisma/client": "3.12.0"

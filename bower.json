@@ -1,0 +1,24 @@
+{
+  "name": "prisma-starter-ts-app",
+  "description": "prisma quickstart",
+  "keywords": [
+    "hello-world",
+    "prisma",
+    "node",
+    "JavaScript",
+    "JS",
+    "TypeScript",
+    "TS"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "prisma-quickstart": "https://pris.ly/quickstart"
+  }
+}
